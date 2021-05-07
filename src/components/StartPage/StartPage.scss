@@ -1,0 +1,168 @@
+.start-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+
+    .note{
+        width: 90%;
+        border: 2px solid black;
+        border-radius: 1.3rem;
+        background-color: rgb(2, 2, 49);
+        display: grid;
+        align-items: flex-start;
+        justify-items: center;
+        grid-template-columns: 100%;
+        margin-bottom: 0.5rem;
+        line-height: 1.5rem;
+    }
+    .final-box{
+        width: 90%;
+        height: 35%;
+        border: 2px solid black;
+        border-radius: 1.3rem;
+        background-color: rgb(2, 2, 49);
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 100%;
+        .title {
+            font-size: 3rem;
+            font-weight: bolder;
+            font-style: oblique;
+        }
+        .winner{
+            width: 50%;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-style: italic;
+            animation: winner 4s infinite ease-in-out;
+        }
+        @keyframes winner {
+            0%{
+                font-size: 2rem;
+                color: red;
+            }
+            20%{
+                font-size: 2.2rem;
+                color: orange;
+            }
+            40%{
+                font-size: 2.4rem;
+                color: yellow;
+            }
+            60%{
+                font-size: 2.6rem;
+                color: green;
+            }
+            80%{
+                font-size: 2.8rem;
+                color: blue;
+            }
+            90%{
+                font-size: 2.9rem;
+                color: indigo;
+            }
+            100%{
+                font-size: 3rem;
+                color: violet;
+            }
+        }
+        button{
+            padding: 1rem;
+            width: 80%;
+            font-size: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            border: 2px solid black;
+            border-radius: 3rem;
+            letter-spacing: 0.3rem;
+            background-color: yellow;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+    }
+    .box{
+        width: 90%;
+        height: 35%;
+        border: 2px solid black;
+        border-radius: 1.3rem;
+        background-color: rgb(2, 2, 49);
+        display: grid;
+        grid-template-columns: 100%;
+
+        .player-1,.player-2{
+            display: grid;
+            align-items: end;
+            justify-items: center;
+    
+            input{
+                width: 80%;
+                height: 2rem;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1.1rem;
+                border: none;
+                border-bottom: 2px solid yellow;
+                background-color: transparent;
+                color: whitesmoke;
+            }
+        
+            input:focus {
+                border: none;
+                caret-color: yellow;
+            }
+        }
+    
+        .play{
+            display: grid;
+            .active, .disable{
+                width : 80%;
+                padding: .5rem;
+                align-self: center;
+                justify-self: center;
+                border: none;
+                border-radius: 1rem;
+                letter-spacing: .2rem;
+                background-color: yellow;
+                color: black;
+                font-size: 1.2rem;
+                font-family: monospace;
+                cursor: pointer;
+            }
+              
+            .active:hover{
+                width: 85%;
+                padding: 0.7rem;
+            }
+              
+            .disable{
+                background-color: grey;
+                cursor: default;  
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .start-container{
+        .box{
+            width: 25%;
+            height: 25%;
+            .player-1 input,.player-2 input{
+                font-size: 1.5rem;
+            }   
+        }
+        .final-box{
+            width: 25%;
+            height: 25%;
+        }
+        .note{
+            width: 25%;
+            font-size: 1.2rem;
+        }
+    }
+}

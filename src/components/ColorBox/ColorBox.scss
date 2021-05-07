@@ -1,0 +1,30 @@
+.color-box{
+    border: 2px solid white;
+    width: 80%;
+    height: 80%;
+    border-radius: 1.5rem;
+    cursor: pointer;
+  }
+.color-box:hover{
+    width: 90%;
+    height: 90%;
+}
+
+  @media screen and (min-width: 768px) {
+    .color-box{
+        width: 80%;
+        height: 80%;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .color-box{
+      width: 60%;
+      height: 60%;
+      border-radius: .6rem;
+    }
+    .color-box:hover{
+      width: 70%;
+      height: 70%; 
+    }
+}
